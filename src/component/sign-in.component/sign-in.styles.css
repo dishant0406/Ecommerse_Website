@@ -1,0 +1,51 @@
+.sign-in{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  /* margin-left: 10vh; */
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  
+}
+
+h2{
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #fff;
+  /* text-align: center; */
+  text-transform: capitalize;
+  
+}
+
+.sub-head{
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.sign-in-form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.submit-btn{
+  background-color: #009BFF;
+  outline: none;
+  height: 2.4rem;
+  width: 25.2rem;
+  padding: 0.2rem;
+  font-size: 1rem;
+  border-radius: 0.7rem;
+  color: #fff;
+  border: none;
+  text-align: center;
+
+}
+
+
+.submit-btn:hover{
+  background-color: #33afff;
+}

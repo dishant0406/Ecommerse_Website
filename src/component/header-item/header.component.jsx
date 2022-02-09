@@ -12,6 +12,7 @@ const Header= ()=>(
   </Link>
   <div className="options">
   <Link className="option" to='/shop' key='shop'>Shop</Link>
+  <Link className="option" to='/sign' key='shop'>Login</Link>
   <Link className="option overlay" to='/contact' key='contact'>Contact Us</Link>
   </div>
   </div>
