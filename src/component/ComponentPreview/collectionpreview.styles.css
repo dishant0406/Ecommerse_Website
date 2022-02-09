@@ -11,6 +11,11 @@
 
 .preview{
   display: flex;
-  margin-bottom: 5rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  justify-content: center;
   
+}
+.title{
+  color: #e0dddd;
 }

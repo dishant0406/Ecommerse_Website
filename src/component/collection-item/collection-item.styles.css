@@ -9,12 +9,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid 0.1rem #000;
+  border: solid 0.1rem #fff;
   transition: all 0.3s;
   border-radius: 1rem;
   overflow: hidden;
   margin: 1rem;
   margin-bottom: 5rem;
+  background-color: #fff;
 }
 
 .collection-item:hover{
@@ -75,4 +76,8 @@
   font-size: 1.3rem;
   text-transform: uppercase;
   text-align: center;
+}
+
+.price{
+  font-size: 1.2rem;
 }
