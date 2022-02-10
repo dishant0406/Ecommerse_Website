@@ -1,6 +1,7 @@
 import React from "react";
-import './sign-in.styles.css'
+import './sign-in.styles.css';
 import FormInput from "../form-input/form-input.component";
+import { signInWithGoogle } from "../firebase/firebase.utils";
 
 class SignIn extends React.Component{
 
@@ -34,7 +35,7 @@ class SignIn extends React.Component{
         <span className='sub-head'>Sign in with your email and password</span>
 
         <form onSubmit={this.handleSubmit} className='sign-in-form'>
-        <input type="submit" value='Sign In with Google' className="submit-btn"/>
+        <input type="submit" value='Sign In with Google' onClick={signInWithGoogle} className="submit-btn"/>
         <p className="sub-head">or</p>
           <FormInput type="email" value={this.state.email} name='email' label='Email' onChange={this.handleChange} required />
           
