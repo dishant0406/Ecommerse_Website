@@ -35,7 +35,7 @@ class SignIn extends React.Component{
         <span className='sub-head'>Sign in with your email and password</span>
 
         <form onSubmit={this.handleSubmit} className='sign-in-form'>
-        <input type="submit" value='Sign In with Google' onClick={signInWithGoogle} className="submit-btn"/>
+        <input type="submit" value='Sign In with Google' onClick={signInWithGoogle} className="submit-btn google"/>
         <p className="sub-head">or</p>
           <FormInput type="email" value={this.state.email} name='email' label='Email' onChange={this.handleChange} required />
           

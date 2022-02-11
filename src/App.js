@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import SignInAndSignUpPage from './page/signin-and-signup-page/sign-in-up-page.component';
 import Header from './component/header-item/header.component';
 import { auth } from './component/firebase/firebase.utils';
+import { createUserProfileDocument } from './component/firebase/firebase.utils';
 import './App.css';
 import React from 'react';
 
@@ -25,10 +26,33 @@ class App extends React.Component {
 
   componentDidMount() {
 
-    this.unscribeFromAuth = auth.onAuthStateChanged(user => {
-      this.setState({ currentUser: user });
+    this.unscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
 
-      console.log(user);
+
+      if (userAuth) {
+
+        const userRef = createUserProfileDocument(userAuth);
+
+        (await userRef).onSnapshot(snapShot => {
+
+          this.setState({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data()
+            }
+          }, () => { console.log(this.state.currentUser) })
+
+
+        })
+
+
+
+
+      }
+      else {
+        //if user logs out
+        this.setState({ currentUser: userAuth });
+      }
     })
   }
 
