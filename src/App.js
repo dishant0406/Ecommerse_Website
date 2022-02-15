@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import SignInAndSignUpPage from './page/signin-and-signup-page/sign-in-up-page.component';
 import Header from './component/header-item/header.component';
 import { auth } from './component/firebase/firebase.utils';
+import { connect } from 'react-redux';
 import { createUserProfileDocument } from './component/firebase/firebase.utils';
 import './App.css';
 import React from 'react';
@@ -63,7 +64,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='app' >
-        <Header currentUser={this.state.currentUser} />
+        <Header />
         <Switch>
           <Route exact path='/' component={Homepage} />
           <Route exact path='/shop' component={Shop} />
